@@ -1,0 +1,42 @@
+https://stackoverflow.com/questions/38231591/splitting-dictionary-list-inside-a-pandas-column-into-separate-columns/38231651#38231651
+
+
+   StationID                   Pollutants
+0       8809  {"a":"46","b":"3","c":"12"}
+1       8810   {"a":"36","b":"5","c":"8"}
+2       8811            {"b":"2","c":"7"}
+3       8812                   {"c":"11"}
+4       8813          {"a":"82","c":"15"}
+
+
+=========================Method 1======================================
+
+df_final = pd.concat([df, df['Pollutants'].apply(pd.Series)], axis = 1).drop('Pollutants', axis = 1)
+
+
+=========================Method 2======================================
+
+df2["Pollutants"] = df2["Pollutants"].apply(lambda x : dict(eval(x)) )
+df3 = df2["Pollutants"].apply(pd.Series )
+
+    a    b   c
+0   46    3  12
+1   36    5   8
+2  NaN    2   7
+3  NaN  NaN  11
+4   82  NaN  15
+
+
+result = pd.concat([df, df3], axis=1).drop('Pollutants', axis=1)
+result
+
+   StationID    a    b   c
+0       8809   46    3  12
+1       8810   36    5   8
+2       8811  NaN    2   7
+3       8812  NaN  NaN  11
+4       8813   82  NaN  15
+
+==================================******=============================================
+
+
