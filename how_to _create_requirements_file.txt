@@ -1,0 +1,8 @@
+https://github.com/bndr/pipreqs
+http://en.rsabbir.com/auto-generate-requirements-txt-for-python-project/
+
+$ pip install pipreqs
+$ pipreqs /path/to/project
+e.g. $ pipreqs /home/cso/classification
+
+Make sure python file is there
