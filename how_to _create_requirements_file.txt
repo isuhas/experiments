@@ -6,3 +6,21 @@ $ pipreqs /path/to/project
 e.g. $ pipreqs /home/cso/classification
 
 Make sure python file is there
+
+
+How to install?
+pip install -U -r requirements.txt 
+
+====================================================================================
+When I want to make sure I'm installing requirements to the right python, I do this:
+
+$ which -a python python2 python3
+/usr/local/bin/python
+/usr/bin/python
+/usr/local/bin/python2
+/usr/local/bin/python3
+
+$ /usr/bin/python -m pip install -r requirements.txt
+
+Reference:
+https://stackoverflow.com/questions/7225900/how-to-install-packages-using-pip-according-to-the-requirements-txt-file-from-a
