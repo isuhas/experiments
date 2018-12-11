@@ -1,3 +1,5 @@
+#pip install pdf2image
+
 import os
 from pdf2image import convert_from_path
 rootdir = '/home/cso/Downloads/customer_pdfs'
