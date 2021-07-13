@@ -5,10 +5,10 @@ for col in mis_col:
         df[col] = df.groupby('Company_response')[col].transform(lambda x: x.fillna(x.mode()[0] if not x.mode().empty else "Unknown"))
     except:
         print("Error --------------------------------------->")
-------------------------------------------------------------------------------------------------       
+# -----------------------------------------------------------------------------------------------       
 df[col] = df.groupby('Company_response')[col].transform(lambda x: x.fillna(x.mode()[0] if not x.mode().empty else "Empty") )
         
-------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------
 data11.dropna().groupby("Transaction-Type").transform(lambda x: x.fillna(x.mode() [0]))["Consumer-disputes"] 
         
         
