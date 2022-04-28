@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = ML App
+title = ML_App
 
 # (str) Package name
 package.name = mlapp
@@ -93,7 +93,7 @@ fullscreen = 0
 #icon.adaptive_background.filename = %(source.dir)s/data/icon_bg.png
 
 # (list) Permissions
-#android.permissions = INTERNET
+android.permissions = INTERNET
 
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host
